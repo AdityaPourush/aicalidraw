@@ -89,12 +89,15 @@ const Home = () => {
                 });
                 const res = await response.data;
                 setGeneratedResult(res.result);
+                console.log(generatedResult);
                 clearAndDisplayResult(res.result); // clear canvas and show the result
             } catch (error) {
                 console.error('Error calculating:', error);
                 setGeneratedResult('An error occurred while processing the image.');
             } finally {
                 setLoading(false);
+                console.log(loading);
+                
             }
         }
     };
